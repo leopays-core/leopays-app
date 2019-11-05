@@ -1,11 +1,21 @@
 {
   "name": "web-app",
   "version": "0.1.0",
+  "description": "web app",
   "private": true,
-  "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+  "author": {
+    "name": "MLRD CHAIN",
+    "email": "dev@milliard.money",
+    "url": "https://milliard.money"
+  },
+  "homepage": "https://github.com/mlrd-chain/web-app#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mlrd-chain/web-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mlrd-chain/web-app/issues",
+    "email": "dev@milliard.money"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,5 +37,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0"
   }
 }
