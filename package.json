@@ -8,7 +8,7 @@
     "email": "dev@milliard.money",
     "url": "https://milliard.money"
   },
-  "homepage": "https://github.com/mlrd-chain/web-app#readme",
+  "homepage": "./",
   "repository": {
     "type": "git",
     "url": "https://github.com/mlrd-chain/web-app.git"
@@ -17,11 +17,15 @@
     "url": "https://github.com/mlrd-chain/web-app/issues",
     "email": "dev@milliard.money"
   },
+  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "rimraf build && rimraf release && mkdirp build && mkdirp release",
+    "release": "yarn run clean && node scripts/make-react-app.js auto-release --verbose=1",
+    "rollup:react-app": "NODE_ENV=production rollup -c rollup-react-app.config.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +45,53 @@
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "connected-react-router": "^6.5.2",
+    "debug": "^4.1.1",
+    "faker": "^4.1.0",
+    "history": "^4.9.0",
+    "i18next": "^17.0.12",
+    "i18next-browser-languagedetector": "^3.0.3",
+    "i18next-chained-backend": "^2.0.0",
+    "i18next-localstorage-backend": "^3.0.0",
+    "i18next-redux-languagedetector": "^1.1.0",
+    "i18next-xhr-backend": "^3.1.2",
+    "immutable": "^4.0.0-rc.12",
+    "multi-languages-url": "^1.1.2",
+    "prop-types": "^15.7.2",
+    "react-codemod": "^5.0.5",
+    "react-helmet": "^5.2.1",
+    "react-hot-loader": "^4.12.11",
+    "react-i18next": "^10.12.2",
+    "react-loadable": "^5.5.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.4",
+    "redux-immutable": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.0",
+    "with-immutable-props-to-js": "^1.2.0"
+  },
+  "devDependencies": {
+    "@hot-loader/react-dom": "^16.9.0",
+    "archiver": "^3.1.1",
+    "envify": "^4.1.0",
+    "find-remove": "^1.2.2",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.19.4",
+    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-html": "^0.2.1",
+    "rollup-plugin-multi-entry": "^2.1.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-size-snapshot": "^0.10.0",
+    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-visualizer": "^2.5.4",
+    "terser": "^4.2.1",
+    "terser-brunch": "^3.0.0",
+    "uglifyify": "^5.0.2"
   }
 }
