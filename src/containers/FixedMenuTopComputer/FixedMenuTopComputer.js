@@ -49,17 +49,14 @@ class FixedMenuTopComputer extends PureComponent {
             {/*<Image size='mini' src='/logo.png' style={{ marginRight: '1.5em' }} />*/}
             {t('main:proName')}
           </Menu.Item>
+          <Menu.Item as={NavLink} exact to={ml.url('/explorer')} >
+            {t('menu:Explorer')}
+          </Menu.Item>
           <Menu.Item as={NavLink} exact to={ml.url('/dashboard')} >
             {t('menu:Dashboard')}
           </Menu.Item>
-          <Menu.Item as={NavLink} exact to={ml.url('/mining')} >
-            {t('menu:Mining')}
-          </Menu.Item>
-          <Menu.Item as={NavLink} exact to={ml.url('/marketplace')} >
-            {t('menu:Marketplace')}
-          </Menu.Item>
-          <Menu.Item as={NavLink} exact to={ml.url('/wallets')} >
-            {t('menu:Wallets')}
+          <Menu.Item as={NavLink} exact to={ml.url('/wallet')} >
+            {t('menu:Wallet')}
           </Menu.Item>
 
           <Menu.Item position='right' fitted='vertically'>

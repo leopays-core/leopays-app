@@ -1,11 +1,12 @@
 {
   "Home": "Домой",
+  "Explorer": "Explorer",
   "Dashboard": "Кабинет",
   "Exchange": "Биржа",
   "Mining": "Майнинг",
   "Marketplace": "Рынок мощности",
   "Hash power Marketplace": "Рынок мощности",
-  "Wallets": "Кошельки",
+  "Wallet": "Кошелёк",
   "Settings": "Настройки",
   "Log In": "Войти",
   "Log Out": "Выйти",

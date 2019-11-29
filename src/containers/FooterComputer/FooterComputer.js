@@ -38,14 +38,42 @@ class FooterComputer extends PureComponent {
           <Grid divided inverted stackable>
 
             <Grid.Row>
-              <Grid.Column width={16}>
+              <Grid.Column width={4}>
+                <Header as='h4' inverted
+                  content={t('footer:Company').toUpperCase()} />
+                <Divider />
+                <List link inverted>
+                  <List.Item as={Link} to={ml.url('/about')}>
+                    {t('footer:About')}</List.Item>
+                  <List.Item as={Link} to={ml.url('/support')}>
+                    {t('footer:Support')}</List.Item>
+                  <List.Item as={Link} to={ml.url('/faq')}>
+                    {t('footer:FAQ')}</List.Item>
+                </List>
+              </Grid.Column>
+
+              <Grid.Column width={12}>
                 <Header as='h4' inverted
                   content={t('footer:Server Status').toUpperCase()} />
                 <Divider />
                 <List link horizontal inverted celled>
-                  <List.Item as={'p'}>
-                    <Icon name='circle' color='green' /> https://testnet.milliard.money:8888/
-                  </List.Item>
+                  {
+                    Object.keys(this.props.servers).map((key) => {
+                      const item = this.props.servers[key];
+                      const color = (item.error === null) ? "green" : "red";
+                      return (
+                        <List.Item as={'p'} key={item.server.id}>
+                          <Icon name='circle' color={color} />
+                          {item.server.name}
+                          (<a>{
+                            this.props.networks[item.server.chain_id]
+                              ? this.props.networks[item.server.chain_id].name
+                              : "Unknown"
+                          }</a>)
+                        </List.Item>
+                      );
+                    })
+                  }
                 </List>
               </Grid.Column>
             </Grid.Row>
@@ -117,6 +145,8 @@ export const mapStateToProps = (state) => {
     language: state.getIn(['i18next', 'language']),
     languages: state.getIn(['i18next', 'whitelist']),
     pathname: state.getIn(['router', 'location', 'pathname']),
+    servers: state.getIn(['servers', 'servers']),
+    networks: state.getIn(['servers', 'networks']),
   };
 };
 

@@ -9,6 +9,7 @@ import mlURL from 'multi-languages-url';
 import LoadingApp from '../../components/LoadingApp';
 import logger from '../../lib/logger';
 import reactLogo from '../../react-logo.svg';
+import UI from '../../containers/UI';
 
 
 class HomePageLayout extends PureComponent {
@@ -20,7 +21,7 @@ class HomePageLayout extends PureComponent {
 
     if (tReady)
       return (
-        <Fragment>
+        <UI>
           <Helmet>
             <html lang={language} />
             <title>{t('main:proName')}</title>
@@ -37,7 +38,7 @@ class HomePageLayout extends PureComponent {
             </a>
 
           </header>
-        </Fragment>
+        </UI>
       );
     else
       return <LoadingApp />;

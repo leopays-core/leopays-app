@@ -30,12 +30,21 @@ export const device = {
 
 export const i18next = {
   language: {
-    changed: '@@i18next/LANGUAGE_CHANGE',
+    changed: '@@i18next/LANGUAGE_CHANGE',// ?! '@@i18next/LANGUAGE_CHANGED'
+  },
+};
+
+
+export const servers = {
+  server: {
+    error: '@@servers/SERVER_ERROR',
+    update: '@@servers/SERVER_UPDATE',
   },
 };
 
 export default {
-  user: user,
-  device: device,
-  i18next: i18next,
+  user,
+  device,
+  i18next,
+  servers,
 };

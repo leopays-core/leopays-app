@@ -45,32 +45,32 @@ export const routes = (ml, t) => ([
     component: () => (<HomePageLayout />),
   },
   {
+    path: ml.url('/explorer'),
+    component: () => (<BC pn={t('main:proName')} txt={t('menu:Explorer')} />),
+  },
+  {
     path: ml.url('/dashboard'),
     component: () => (<BC pn={t('main:proName')} txt={t('menu:Dashboard')} />),
   },
   {
-    path: ml.url('/wallets'),
-    component: () => (<BC pn={t('main:proName')} txt={t('menu:Wallets')} />),
+    path: ml.url('/wallet'),
+    component: () => (<BC pn={t('main:proName')} txt={t('menu:Wallet')} />),
   },
   {
-    path: ml.url('/exchange'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Trade Digital Currencies')} />),
+    path: ml.url('/my/settings'),
+    component: () => (<BC pn={t('main:proName')} txt={t('menu:Settings')} />),
   },
   {
     path: ml.url('/about'),
     component: () => (<BC pn={t('main:proName')} txt={t('footer:About')} />),
   },
   {
-    path: ml.url('/media'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Media')} />),
-  },
-  {
-    path: ml.url('/referrals'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Referrals')} />),
-  },
-  {
     path: ml.url('/support'),
     component: () => (<BC pn={t('main:proName')} txt={t('footer:Support')} />),
+  },
+  {
+    path: ml.url('/faq'),
+    component: () => (<BC pn={t('main:proName')} txt={t('footer:FAQ')} />),
   },
   {
     path: ml.url('/privacy'),
@@ -99,10 +99,6 @@ export const routes = (ml, t) => ([
       {
         path: ml.url('/my/logout'),
         component: () => (<BC pn={t('main:proName')} txt={t('menu:Logout')} />),
-      },
-      {
-        path: ml.url('/my/settings'),
-        component: () => (<BC pn={t('main:proName')} txt={t('menu:Settings')} />),
       }
     ]
   },

@@ -7,6 +7,7 @@ import configureStore, { history } from '../../store';
 import {
   deviceScreenSizeTypeChanged, deviceScreenHiddenChanged
 } from '../../store/actions/device-actions';
+import { checkAllServers } from '../../store/actions/servers-actions';
 import { getScreenSizeType } from '../../lib/device-info';
 import UI from '../../containers/UI';
 import configureI18n, { handleChangeLocationImmutable } from '../../i18n';
@@ -18,6 +19,7 @@ import 'semantic-ui-css/semantic.min.css';
 const store = configureStore();
 const i18n = configureI18n(store);
 store.subscribe(handleChangeLocationImmutable(store, i18n));
+store.dispatch(checkAllServers());
 
 
 class Root extends PureComponent {
@@ -56,9 +58,9 @@ class Root extends PureComponent {
       <StoreProvider store={store} >
         <I18nextProvider i18n={i18n}>
           <ConnectedRouter history={history}>
-            <UI {...this.props}>
-              {this.props.children}
-            </UI>
+            {/*<UI {...this.props}>*/}
+            {this.props.children}
+            {/*</UI>*/}
           </ConnectedRouter>
         </I18nextProvider>
       </StoreProvider>
