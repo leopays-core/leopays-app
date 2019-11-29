@@ -49,68 +49,12 @@ export const routes = (ml, t) => ([
     component: () => (<BC pn={t('main:proName')} txt={t('menu:Dashboard')} />),
   },
   {
-    path: ml.url('/mining'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Start Mining')} />),
-  },
-  {
     path: ml.url('/wallets'),
     component: () => (<BC pn={t('main:proName')} txt={t('menu:Wallets')} />),
   },
   {
-    path: ml.url('/cpu-gpu-mining'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Mining with CPU/GPU')} />),
-  },
-  {
-    path: ml.url('/asic-mining'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:ASIC Mining')} />),
-  },
-  {
-    path: ml.url('/lhos-mining'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:LitHash OS')} />),
-  },
-  {
-    path: ml.url('/algorithm'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Algorithms')} />),
-  },
-  {
-    path: ml.url('/miner'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Find Miner')} />),
-  },
-  {
-    path: ml.url('/profitability-calculator'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Profitability Calculator')} />),
-  },
-  {
-    path: ml.url('/stratum-generator'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Stratum Generator')} />),
-  },
-  {
-    path: ml.url('/marketplace'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Live Marketplace')} />),
-  },
-  {
-    path: ml.url('/pricing'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Pricing')} />),
-  },
-  {
-    path: ml.url('/compatible-pools'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Compatible Pools')} />),
-  },
-  {
     path: ml.url('/exchange'),
     component: () => (<BC pn={t('main:proName')} txt={t('footer:Trade Digital Currencies')} />),
-  },
-  {
-    path: ml.url('/pool-operators'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Pool Operators')} />),
-  },
-  {
-    path: ml.url('/software-developers'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Software Developers')} />),
-  },
-  {
-    path: ml.url('/business-development'),
-    component: () => (<BC pn={t('main:proName')} txt={t('footer:Business Development')} />),
   },
   {
     path: ml.url('/about'),
@@ -166,21 +110,3 @@ export const routes = (ml, t) => ([
     component: () => (<NotFoundPageLayout />),
   }
 ]);
-
-/*
-{'https://docs.lithash.io/'} {t('footer:API\'s')},
-{'https://github.com/lithash/rest-clients-demo'} {t('footer:Sample code')},
-{'https://blog.lithash.io/'} {t('footer:News')},
-{'https://status.lithash.io/'} {t('footer:Status')},
-{'https://blog.lithash.io/'} {t('footer:Blog')},
-
-{'https://www.facebook.com/@?/'} Facebook,
-{'https://www.youtube.com/c/@?'} Youtube,
-{'https://www.twitter.com/@?/'} Twitter,
-{'https://discordapp.com/channels/@?/@?'} Discord,
-{'https://vk.com/@?'} VK,
-{'https://www.reddit.com/r/@?/'} Reddit,
-{'https://github.com/lithash'} GitHub,
-{'https://www.instagram.com/@?/'} Instagram,
-`mailto:info@lithash.io`,
-*/

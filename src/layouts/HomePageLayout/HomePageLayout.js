@@ -29,7 +29,7 @@ class HomePageLayout extends PureComponent {
             <img src={reactLogo} className="App-logo" alt="logo" />
             <a
               className="App-link"
-              href="https://lithash.io"
+              href="https://testnet.milliard.money"
               target="_blank"
               rel="noopener noreferrer"
             >
