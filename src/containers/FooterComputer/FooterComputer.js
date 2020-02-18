@@ -68,7 +68,7 @@ class FooterComputer extends PureComponent {
                           (<a>{
                             this.props.networks[item.server.chain_id]
                               ? this.props.networks[item.server.chain_id].name
-                              : "Unknown"
+                              : ""//"Unknown"
                           }</a>)
                         </List.Item>
                       );

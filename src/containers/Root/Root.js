@@ -40,15 +40,15 @@ class Root extends PureComponent {
 
   handleResize() {
     const newDeviceScreenSizeType = getScreenSizeType();
-    const device = store.getState().get('device');
-    if (device.getIn(['screen', 'size', 'type']) !== newDeviceScreenSizeType)
+    const device = store.getState().device;
+    if (device.screen.size.type !== newDeviceScreenSizeType)
       store.dispatch(deviceScreenSizeTypeChanged(newDeviceScreenSizeType));
   }
 
   handleVisibilityChange() {
-    const device = store.getState().get('device');
+    const device = store.getState().device;
     const hiddenStatus = document['hidden'];
-    if (device.getIn(['screen', 'hidden']) !== hiddenStatus)
+    if (device.screen.hidden !== hiddenStatus)
       store.dispatch(deviceScreenHiddenChanged(hiddenStatus));
   }
 
