@@ -1,4 +1,3 @@
-import { push } from 'connected-react-router/immutable';
 import { user } from '../../constants/action-types';
 import { auth } from '../../constants/action-types';
 //import { userService } from '../services';

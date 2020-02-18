@@ -84,9 +84,9 @@ UserMenuTrigger.propTypes = {
 
 export const mapStateToProps = (state) => {
   return {
-    language: state.getIn(['i18next', 'language']),
-    loginned: state.getIn(['auth', 'loginned']),
-    user: state.getIn(['auth', 'user']),
+    language: state.i18next.language,
+    loginned: state.auth.loginned,
+    user: state.auth.user,
   };
 };
 

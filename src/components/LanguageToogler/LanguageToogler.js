@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import withImmutablePropsToJS from 'with-immutable-props-to-js';
 import { hot } from 'react-hot-loader';
 import { Dropdown } from 'semantic-ui-react';
 import { push } from 'connected-react-router';
@@ -70,11 +69,11 @@ class LanguageToogler extends Component {
 
 function mapStateToProps(state) {
   return {
-    language: state.getIn(['i18next', 'language']),
-    languages: state.getIn(['i18next', 'whitelist']),
-    languagesList: state.getIn(['i18next', 'languagesList']),
-    defaultLanguage: state.getIn(['i18next', 'fallbackLng']),
-    location: state.getIn(['router', 'location']),
+    language: state.i18next.language,
+    languages: state.i18next.whitelist,
+    languagesList: state.i18next.languagesList,
+    defaultLanguage: state.i18next.fallbackLng,
+    location: state.router.location,
   };
 }
 
@@ -87,7 +86,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default hot(module)(
-  connect(mapStateToProps, mapDispatchToProps)(
-    withImmutablePropsToJS(LanguageToogler)
-  )
+  connect(mapStateToProps, mapDispatchToProps)(LanguageToogler)
 );

@@ -1,13 +1,12 @@
-import { Map } from 'immutable';
 import { createStore } from 'redux';
 import { reducers } from './reducers';
 import { enhancer, createReducer } from './store';
 
 
-export default function configureStore(initialState = Map()) {
+export default function configureStore(initialState = {}) {
   const store = createStore(
     createReducer(reducers),
-    Map().mergeDeep(initialState),
+    Object.assign({}, initialState),
     enhancer
   );
 

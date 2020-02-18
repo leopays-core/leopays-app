@@ -15,7 +15,7 @@
   },
   "bugs": {
     "url": "https://github.com/mlrd-chain/web-app/issues",
-    "email": "dev@milliard.money"
+    "email": "dev@LeoPays.com"
   },
   "proxy": "http://localhost:3000",
   "scripts": {
@@ -55,7 +55,6 @@
     "i18next-localstorage-backend": "^3.0.0",
     "i18next-redux-languagedetector": "^1.1.0",
     "i18next-xhr-backend": "^3.1.2",
-    "immutable": "^4.0.0-rc.12",
     "multi-languages-url": "^1.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
@@ -69,13 +68,11 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
-    "redux-immutable": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.0",
-    "text-encoding": "^0.7.0",
-    "with-immutable-props-to-js": "^1.2.0"
+    "text-encoding": "^0.7.0"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^16.9.0",

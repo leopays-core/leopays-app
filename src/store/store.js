@@ -1,16 +1,14 @@
-import { Map, fromJS } from 'immutable';
-import { combineReducers } from 'redux-immutable';
-import { applyMiddleware, compose } from 'redux';
+import { applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import { createBrowserHistory as createHistory } from 'history';
-import { connectRouter, routerMiddleware } from 'connected-react-router/immutable';
+import { connectRouter, routerMiddleware } from 'connected-react-router';
 
 
 export const history = createHistory({
   basename: `${process.env.PUBLIC_URL}`, //store.app.base;
 });
 const staticReducers = {
-  router: fromJS(connectRouter(history)),
+  router: connectRouter(history),
 };
 
 export const middleware = [thunk];
@@ -34,7 +32,6 @@ export const createReducer = (asyncReducers) => {
     {
       ...staticReducers,
       ...asyncReducers,
-    },
-    Map()
+    }
   );
 }

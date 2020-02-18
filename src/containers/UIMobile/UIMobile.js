@@ -30,7 +30,7 @@ UIMobile.propTypes = {
 
 export const mapStateToProps = (state) => {
   return {
-    //language: state.getIn(['i18next', 'language']),
+    //language: state.i18next.language,
   };
 };
 
