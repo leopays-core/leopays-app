@@ -106,7 +106,7 @@ class ExplorerPageLayout extends PureComponent {
             <html lang={language} />
             <title>{t('menu:Explorer')} | {t('main:proName')}</title>
           </Helmet>
-          <Container style={{ marginTop: '7em' }} >
+          <Container style={{ marginTop: '7em' }}>
             <TableExampleCelledStriped />
           </Container>
         </UI>

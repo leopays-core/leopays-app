@@ -8,7 +8,7 @@ import {
   List,
   Segment,
   Icon,
-  Label,
+  Table,
   Image,
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
@@ -56,27 +56,44 @@ class FooterComputer extends PureComponent {
                 <Header as='h4' inverted
                   content={t('footer:Server Status').toUpperCase()} />
                 <Divider />
-                <List link horizontal inverted celled>
-                  {
-                    Object.keys(this.props.servers).map((key) => {
-                      const item = this.props.servers[key];
-                      const color = (item.error === null) ? "green" : "red";
-                      return (
-                        <List.Item as={'p'} key={item.server.id}>
-                          <Icon name='circle' color={color} />
-                          {item.server.name}
-                          (<a>{
-                            this.props.networks[item.server.chain_id]
-                              ? this.props.networks[item.server.chain_id].name
-                              : ""//"Unknown"
-                          }</a>)
-                        </List.Item>
-                      );
-                    })
-                  }
-                </List>
-              </Grid.Column>
-            </Grid.Row>
+                {/*<Table inverted>
+                  <Table.Header>
+                    <Table.Row>
+                      <Table.HeaderCell>Статус</Table.HeaderCell>
+                      <Table.HeaderCell>Сервер</Table.HeaderCell>
+                      <Table.HeaderCell>Сеть</Table.HeaderCell>
+                    </Table.Row>
+                  </Table.Header>
+
+                  <Table.Body>
+                    {//<List link horizontal inverted celled>
+                      Object.keys(this.props.servers).map((key) => {
+                        const item = this.props.servers[key];
+                        const color = (item.error === null) ? "green" : "red";
+                        return (
+                          <Table.Row>
+                            <Table.Cell collapsing >
+                              <Icon name='circle' color={color} />
+                            </Table.Cell>
+                            <Table.Cell>
+                              {item.server.title}
+                            </Table.Cell>
+                            <Table.Cell collapsing >
+                              <a>{
+                                item.server.network_title
+                                  / * this.props.networks[item.server.chain_id]
+                                  ? this.props.networks[item.server.chain_id].name
+                                  : ""//"Unknown"* /
+                              }</a>
+                            </Table.Cell>
+                          </Table.Row>
+                        );
+                      })
+                    }
+                  </Table.Body>
+                </Table>*/}
+              </Grid.Column >
+            </Grid.Row >
 
             <Divider />
 
@@ -126,9 +143,9 @@ class FooterComputer extends PureComponent {
               </Grid.Column>
             </Grid.Row>
 
-          </Grid>
-        </Container>
-      </Segment>
+          </Grid >
+        </Container >
+      </Segment >
     );
   }
 }

@@ -19,7 +19,7 @@ import 'semantic-ui-css/semantic.min.css';
 const store = configureStore();
 const i18n = configureI18n(store);
 store.subscribe(handleChangeLocation(store, i18n));
-store.dispatch(checkAllServers());
+//store.dispatch(checkAllServers());
 
 
 class Root extends PureComponent {
