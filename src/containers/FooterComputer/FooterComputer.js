@@ -33,7 +33,7 @@ class FooterComputer extends PureComponent {
     const fixed = true;
 
     return (
-      <Segment inverted vertical style={{ padding: '5em 0em' }}>
+      <Segment inverted vertical style={{ padding: '5em 0em', margin: '1em 0em 0em 0em' }}>
         <Container>
           <Grid divided inverted stackable>
 
@@ -99,7 +99,7 @@ class FooterComputer extends PureComponent {
                       {t('footer:Terms & Conditions')}
                     </List.Item>
                     <List.Item
-                      as={'a'} target='_blank' href={`mailto:info@milliard.money`}
+                      as={'a'} target='_blank' href={`mailto:info@leopays.com`}
                     >
                       {t('footer:Contact')}
                     </List.Item>

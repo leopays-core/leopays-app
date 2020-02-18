@@ -26,6 +26,11 @@ const HomePageLayout = Loadable({
   loader: () => import('../../layouts/HomePageLayout'),
   loading: LoadingApp,
 });
+const ExplorerPageLayout = Loadable({
+  loader: () => import('../../layouts/ExplorerPageLayout'),
+  loading: LoadingApp,
+});
+
 const SignInLayout = Loadable({
   loader: () => import('../../layouts/SignInLayout'),
   loading: LoadingApp,
@@ -46,7 +51,7 @@ export const routes = (ml, t) => ([
   },
   {
     path: ml.url('/explorer'),
-    component: () => (<BC pn={t('main:proName')} txt={t('menu:Explorer')} />),
+    component: () => (<ExplorerPageLayout />),
   },
   {
     path: ml.url('/dashboard'),
@@ -57,7 +62,7 @@ export const routes = (ml, t) => ([
     component: () => (<BC pn={t('main:proName')} txt={t('menu:Wallet')} />),
   },
   {
-    path: ml.url('/my/settings'),
+    path: ml.url('/settings'),
     component: () => (<BC pn={t('main:proName')} txt={t('menu:Settings')} />),
   },
   {

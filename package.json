@@ -4,9 +4,9 @@
   "description": "web app",
   "private": true,
   "author": {
-    "name": "MLRD CHAIN",
-    "email": "dev@milliard.money",
-    "url": "https://milliard.money"
+    "name": "LeoPays",
+    "email": "dev@LeoPays.com",
+    "url": "https://LeoPays.com"
   },
   "homepage": "./",
   "repository": {
