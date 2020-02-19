@@ -18,38 +18,58 @@ export const networks = [
   }
 ];
 
-export const current_server_id = "0";
+export const current_server_id = "1";
 export const servers = [
-  {
+  /*{
     id: "0",
     chain_id: null,
     type: "EOSIO", network_title: "LeoPays Testnet",
     title: "http://localhost:8888",
-    endpoint: "http://localhost:8888",
-  }, {
+    nodeUrl: 'http://localhost:8888',
+    hyperionUrl: 'http://localhost:17555',
+    coreSymbol: 'LPC',
+    corePrecision: 4,
+    systemDomain: 'eosio',
+  }, */{
     id: "1",
     chain_id: null,
     type: "EOSIO", network_title: "LeoPays Testnet",
+    title: "https://testnet.milliard.money:8888",
+    nodeUrl: 'https://testnet.milliard.money:8888',
+    hyperionUrl: 'https://testnet.milliard.money:17555',
+    coreSymbol: 'LPC',
+    corePrecision: 4,
+    systemDomain: 'eosio',
+  }, , {
+    id: "3",
+    chain_id: null,
+    type: "EOSIO", network_title: "LeoPays Testnet",
     title: "https://localhost:8888",
-    endpoint: "https://localhost:8888",
-  }, {
+    nodeUrl: 'https://localhost:8888',
+    hyperionUrl: 'https://localhost:17555',
+    coreSymbol: 'LPC',
+    corePrecision: 4,
+    systemDomain: 'eosio',
+  }, /*{
     id: "2",
     chain_id: null,
     type: "EOSIO", network_title: "LeoPays Testnet",
     title: "http://testnet.milliard.money:8888",
-    endpoint: "http://testnet.milliard.money:8888",
-  }, {
-    id: "3",
-    chain_id: null,
-    type: "EOSIO", network_title: "LeoPays Testnet",
-    title: "https://testnet.milliard.money:8888",
-    endpoint: "https://testnet.milliard.money:8888",
-  }, {
+    nodeUrl: 'http://testnet.milliard.money:8888',
+    hyperionUrl: 'http://testnet.milliard.money:17555',
+    coreSymbol: 'LPC',
+    corePrecision: 4,
+    systemDomain: 'eosio',
+  }, */ {
     id: "4",
     chain_id: null,
     type: "EOSIO", network_title: "EOS Mainnet",
     title: "https://node.eosflare.io",
-    endpoint: "https://node.eosflare.io",
+    nodeUrl: 'https://node.eosflare.io',
+    hyperionUrl: undefined,
+    coreSymbol: 'EOS',
+    corePrecision: 4,
+    systemDomain: 'eosio',
   }
 ];
 

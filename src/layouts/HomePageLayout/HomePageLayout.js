@@ -26,17 +26,19 @@ class HomePageLayout extends PureComponent {
             <html lang={language} />
             <title>{t('main:proName')}</title>
           </Helmet>
-          <header id="app" className="App-header">
+          <header
+            id="app" className="App-header"
+            style={{ paddingTop: '7em', paddingBottom: '1em', minHeight: '100vh' }}
+          >
             <img src={reactLogo} className="App-logo" alt="logo" />
             <a
               className="App-link"
-              href="https://testnet.milliard.money"
+              //href="https://testnet.milliard.money"
               target="_blank"
               rel="noopener noreferrer"
             >
               {t('main:welcome')}
             </a>
-
           </header>
         </UI>
       );

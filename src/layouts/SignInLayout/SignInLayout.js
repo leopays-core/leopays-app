@@ -52,7 +52,10 @@ class SignInLayout extends PureComponent {
             <html lang={language} />
             <title>{t('main:proName')}</title>
           </Helmet>
-          <div id="app" className="App-header">
+          <div
+            id="app" className="App-header"
+            style={{ paddingTop: '7em', paddingBottom: '1em', minHeight: '100vh' }}
+          >
             <Grid inverted textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
               <Grid.Column style={{ maxWidth: 450 }}>
                 <Header inverted as='h2' color='teal' textAlign='center'>

@@ -19,7 +19,7 @@ import 'semantic-ui-css/semantic.min.css';
 const store = configureStore();
 const i18n = configureI18n(store);
 store.subscribe(handleChangeLocation(store, i18n));
-//store.dispatch(checkAllServers());
+store.dispatch(checkAllServers());
 
 
 class Root extends PureComponent {
@@ -31,11 +31,17 @@ class Root extends PureComponent {
 
     window.addEventListener('resize', this.handleResize);
     window.addEventListener('visibilitychange', this.handleVisibilityChange);
+
+    this.checkAllServersInterval = setInterval(
+      () => store.dispatch(checkAllServers()),
+      60 * 1000
+    );
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
     window.removeEventListener('visibilitychange', this.handleVisibilityChange);
+    clearInterval(this.checkAllServersInterval);
   }
 
   handleResize() {

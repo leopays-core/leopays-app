@@ -33,11 +33,11 @@ class FooterComputer extends PureComponent {
     const fixed = true;
 
     return (
-      <Segment inverted vertical style={{ padding: '5em 0em', margin: '1em 0em 0em 0em' }}>
+      <Segment inverted vertical style={{ padding: '5em 0em' }}>
         <Container>
           <Grid divided inverted stackable>
 
-            <Grid.Row>
+            {/*<Grid.Row>
               <Grid.Column width={4}>
                 <Header as='h4' inverted
                   content={t('footer:Company').toUpperCase()} />
@@ -56,7 +56,7 @@ class FooterComputer extends PureComponent {
                 <Header as='h4' inverted
                   content={t('footer:Server Status').toUpperCase()} />
                 <Divider />
-                {/*<Table inverted>
+                <Table inverted>
                   <Table.Header>
                     <Table.Row>
                       <Table.HeaderCell>Статус</Table.HeaderCell>
@@ -71,19 +71,19 @@ class FooterComputer extends PureComponent {
                         const item = this.props.servers[key];
                         const color = (item.error === null) ? "green" : "red";
                         return (
-                          <Table.Row>
+                          <Table.Row key={key}>
                             <Table.Cell collapsing >
                               <Icon name='circle' color={color} />
                             </Table.Cell>
                             <Table.Cell>
-                              {item.server.title}
+                              {item.server.title} {item.info && '(' + item.info.head_block_num + ')'}
                             </Table.Cell>
                             <Table.Cell collapsing >
                               <a>{
                                 item.server.network_title
-                                  / * this.props.networks[item.server.chain_id]
-                                  ? this.props.networks[item.server.chain_id].name
-                                  : ""//"Unknown"* /
+                                / * this.props.networks[item.server.chain_id]
+                                ? this.props.networks[item.server.chain_id].name
+                                : ""//"Unknown" * /
                               }</a>
                             </Table.Cell>
                           </Table.Row>
@@ -91,11 +91,11 @@ class FooterComputer extends PureComponent {
                       })
                     }
                   </Table.Body>
-                </Table>*/}
+                </Table>
               </Grid.Column >
             </Grid.Row >
 
-            <Divider />
+            <Divider />*/}
 
             <Grid.Row>
               <Grid.Column width={4} textAlign='left'>
