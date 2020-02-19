@@ -79,6 +79,9 @@ class DownloadPageLayout extends PureComponent {
               Для загрузки программы выберите версию операционной системы и нажмите ссылку "Скачать".
             </Segment>
             <Header as='h2' textAlign='left'>LeoPays Commander</Header>
+            <Segment textAlign='left'>
+              LeoPays Commander - автоматизация управления локальными узлами и работа с блокчейном.
+            </Segment>
             <TableOfDownloads />
           </Container>
         </UI >
