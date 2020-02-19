@@ -14,8 +14,8 @@ import { terser } from 'rollup-plugin-terser';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const visualizerOptions = {
-  filename: 'release/stats-electron.html',
-  title: 'Electron - Rollup Visualizer',
+  filename: 'release/stats.html',
+  title: 'React WEB App - Rollup Visualizer',
   sourcemap: false,
   open: false,
 };
