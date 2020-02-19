@@ -71,9 +71,11 @@ function replaceFiles(argv) {
 }
 
 function cleanFiles(argv) {
+  /*
   const removed = findRemoveSync(`${argv.source}/${argv.name}/`, { extensions: ['.map'] });
   if (argv.verbose)
     console.log(`Removed files:`, removed);
+  */
 
   const assetManifestFile = `${argv.source}/${argv.name}/asset-manifest.json`;
   let am = JSON.parse(fs.readFileSync(assetManifestFile, 'utf8'));
