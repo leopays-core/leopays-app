@@ -79,6 +79,7 @@ function cleanFiles(argv) {
 
   const assetManifestFile = `${argv.source}/${argv.name}/asset-manifest.json`;
   let am = JSON.parse(fs.readFileSync(assetManifestFile, 'utf8'));
+  /*
   for (i in am.files) {
     if (i.endsWith('.map')) {
       am.files[i] = undefined;
@@ -86,6 +87,7 @@ function cleanFiles(argv) {
         console.log(`Removed field in asset-manifest.json:`, i);
     }
   }
+  */
   am = JSON.stringify(am);
   fs.writeFileSync(assetManifestFile, am);
 
