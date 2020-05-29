@@ -1,1 +1,4 @@
-# web-app
+# app
+- WEB;
+- iOS;
+- Android.
