@@ -20,7 +20,7 @@ function ContactUsScreen(props) {
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <OptionButton
           label={`${Constants.manifest.extra.contactUsEmail}`}
-          onPress={() => WebBrowser.openBrowserAsync(`mailto:${Constants.manifest.extra.contactUsEmail}`)}
+          onPress={() => Linking.openURL(`mailto:${Constants.manifest.extra.contactUsEmail}?subject=From LeoPays App`)}
         />
       </ScrollView>
     </View>
