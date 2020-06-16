@@ -24,7 +24,16 @@ function MainBottomTabNavigator({ navigation, route, t }) {
 
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME} >
+      <BottomTab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          title: t('Home'),
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="home" />,
+        }}
+      />
 
+      {/*
       <BottomTab.Screen
         name="Home"
         component={HomeScreen}
@@ -42,6 +51,7 @@ function MainBottomTabNavigator({ navigation, route, t }) {
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="bars" />,
         }}
       />
+      */}
 
     </BottomTab.Navigator>
   );

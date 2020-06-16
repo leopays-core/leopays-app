@@ -10,6 +10,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 import { MonoText } from '../components/StyledText';
 import OptionButton from '../components/OptionButton';
+import logo from '../assets/images/icon.png';
 
 
 
@@ -18,11 +19,15 @@ function HomeScreen(props) {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        <View>
-          <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>{t('Project Title')}</Text>
+        <View style={styles.welcomeContainer}>
+          <Image
+            source={require('../assets/images/icon.png')}
+            style={styles.welcomeImage}
+          />
         </View>
 
         <View style={styles.comingSoonContainer} >
+          <Text style={{ fontWeight: 'bold', textAlign: 'center', }}>{t('Project Title')}</Text>
           <Text style={styles.сomingSoon}>{t('Coming soon')}...</Text>
         </View>
 
