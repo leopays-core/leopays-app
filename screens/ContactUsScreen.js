@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as WebBrowser from 'expo-web-browser';
+//import * as WebBrowser from 'expo-web-browser';
 import * as Linking from 'expo-linking';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
