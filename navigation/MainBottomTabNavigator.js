@@ -33,16 +33,6 @@ function MainBottomTabNavigator({ navigation, route, t }) {
         }}
       />
 
-      {/*
-      <BottomTab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          title: t('Home'),
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="home" />,
-        }}
-      />
-
       <BottomTab.Screen
         name='Menu'
         component={MenuStackNavigator}
@@ -51,7 +41,6 @@ function MainBottomTabNavigator({ navigation, route, t }) {
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="bars" />,
         }}
       />
-      */}
 
     </BottomTab.Navigator>
   );
