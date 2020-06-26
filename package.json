@@ -59,7 +59,7 @@
     "i18next-redux-languagedetector": "^1.1.0",
     "i18next-xhr-backend": "^3.2.2",
     "immutable": "^4.0.0-rc.12",
-    "jsrsasign": "^8.0.15",
+    "jsrsasign": "^8.0.19",
     "locale-emoji": "^0.3.0",
     "multi-languages-url": "^1.1.2",
     "prop-types": "^15.7.2",
